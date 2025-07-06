@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube.dixit.dev</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<!-- #374151 -->
+
+<body class="bg-[#f8f9fa]">
+    <script>
+        const videos = [
+            {
+                thumbnail: "assets/t1.jpg",
+                duration: "3:33:04",
+                profile: "assets/p1.jpg",
+                title: "A playlist for you to feel like an exiled noble plotting your return to the throne",
+                channel: "Villain's Playlist",
+                views: "38K views • 3 weeks ago"
+            },
+            {
+                thumbnail: "assets/t2.jpg",
+                duration: "3:37:31",
+                profile: "assets/p2.jpg",
+                title: "a playlist for the king who killed everyone who doubted him",
+                channel: "Villain's Playlist",
+                views: "29K views • 1 month ago"
+            },
+            {
+                thumbnail: "assets/t3.jpg",
+                duration: "3:33:31",
+                profile: "assets/p3.jpg",
+                title: "a playlist to make you feel like the devil’s lawyer, always smiling",
+                channel: "Villain's Playlist",
+                views: "25K views • 1 month ago"
+            },
+            {
+                thumbnail: "assets/t4.jpg",
+                duration: "3:30:38",
+                profile: "assets/p4.jpg",
+                title: "a playlist for you to feel like a betrayed prince orchestrating a blood-soaked coup",
+                channel: "Villain's Playlist",
+                views: "11K views • 1 month ago"
+            },
+            {
+                thumbnail: "assets/t5.jpg",
+                duration: "3:52:32",
+                profile: "assets/p5.jpg",
+                title: "a playlist for when you're toasting your own betrayal",
+                channel: "Villain's Playlist",
+                views: "2.1K views • 3 weeks ago"
+            },
+            {
+                thumbnail: "assets/t6.jpg",
+                duration: "25:24",
+                profile: "assets/p6.jpg",
+                title: "NVIDIA Never Authorized The Production Of This Card",
+                channel: "Linus Tech Tips",
+                views: "1.1M views • 6 days ago"
+            },
+            {
+                thumbnail: "assets/t7.jpg",
+                duration: "18:48",
+                profile: "assets/p7.jpg",
+                title: "How to Setup Windows PROPERLY",
+                channel: "Linus Tech Tips",
+                views: "1.4M views • 1 month ago"
+            },
+            {
+                thumbnail: "assets/t8.jpg",
+                duration: "28:26",
+                profile: "assets/p8.jpg",
+                title: "The CapCut Experience (as an Adobe user)",
+                channel: "Bog",
+                views: "456K views • 9 months ago"
+            },
+            {
+                thumbnail: "assets/t9.jpg",
+                duration: "15:43",
+                profile: "assets/p9.jpg",
+                title: "Even I’M Jealous of These Guys - Reacting to r/HomeLab",
+                channel: "Linus Tech Tips",
+                views: "1.4M views • 3 months ago"
+            },
+            {
+                thumbnail: "assets/t10.jpg",
+                duration: "13:31",
+                profile: "assets/p10.jpg",
+                title: "I made my own Wikipedia, but anyone can edit it",
+                channel: "FaceDev",
+                views: "222K views • 4 months ago"
+            },
+            {
+                thumbnail: "assets/t11.jpg",
+                duration: "13:00",
+                profile: "assets/p11.jpg",
+                title: "Why I Use C | Prime Reacts",
+                channel: "ThePrimeTime",
+                views: "225K views • 1 year ago"
+            },
+            {
+                thumbnail: "assets/t12.jpg",
+                duration: "7:07",
+                profile: "assets/p12.jpg",
+                title: "What If You Had NASA's Internet Speed? (97 000 mbp/s)",
+                channel: "Bog",
+                views: "926K views • 3 year ago"
+            },
+            {
+                thumbnail: "assets/t13.jpg",
+                duration: "13:49",
+                profile: "assets/p13.jpg",
+                title: "The Windows App Iceberg",
+                channel: "Bog",
+                views: "625K views • 1 year ago"
+            },
+            {
+                thumbnail: "assets/t14.jpg",
+                duration: "53:37",
+                profile: "assets/p14.jpg",
+                title: "The Linux Experience - GNOME",
+                channel: "Bog",
+                views: "478K views • 1 month ago"
+            },
+            {
+                thumbnail: "assets/t15.jpg",
+                duration: "14:05",
+                profile: "assets/p15.jpg",
+                title: "Somebody emailed me a trojan virus",
+                channel: "Bog",
+                views: "2.1M views • 10 month ago"
+            },
+            {
+                thumbnail: "assets/t16.jpg",
+                duration: "14:41",
+                profile: "assets/p16.jpg",
+                title: "Somebody cloned my voice to make YouTube videos",
+                channel: "Bog",
+                views: "133K views • 2 month ago"
+            },
+            {
+                thumbnail: "assets/t17.jpg",
+                duration: "45:18",
+                profile: "assets/p17.jpg",
+                title: "The Vim Experience",
+                channel: "Bog",
+                views: "478K views • 7 month ago"
+            },
+            {
+                thumbnail: "assets/t18.jpg",
+                duration: "37:56",
+                profile: "assets/p18.jpg",
+                title: "I made the PC I couldn't buy",
+                channel: "Christian Selig",
+                views: "268K views • 22 hours ago"
+            },
+            {
+                thumbnail: "assets/t19.jpg",
+                duration: "6:38",
+                profile: "assets/p19.jpg",
+                title: "Lenovo Legion 5 (2025) - Thinner, Lighter, Better",
+                channel: "Dave2D",
+                views: "18K views • 1 hours ago"
+            },
+            {
+                thumbnail: "assets/t20.jpg",
+                duration: "20:07",
+                profile: "assets/p20.jpg",
+                title: "Lenovo Legion Go - OMG THIS IS SO COOL",
+                channel: "Dave2D",
+                views: "2.3M views • 1 year ago"
+            },
+            {
+                thumbnail: "assets/t21.jpg",
+                duration: "6:30",
+                profile: "assets/p21.jpg",
+                title: "AMD Made Something INCREDIBLE!",
+                channel: "Dave2D",
+                views: "1.4M views • 4 months ago"
+            },
+            {
+                thumbnail: "assets/t22.jpg",
+                duration: "5:31",
+                profile: "assets/p22.jpg",
+                title: "RTX 5090 Laptops - I Noticed Something...",
+                channel: "Dave2D",
+                views: "590K views • 5 months ago"
+            },
+            {
+                thumbnail: "assets/t23.jpg",
+                duration: "8:00",
+                profile: "assets/p23.jpg",
+                title: "Keyboards Should Have Been Like This",
+                channel: "Dave2D",
+                views: "420K views • 1 year ago"
+            },
+            {
+                thumbnail: "assets/t24.jpg",
+                duration: "21:51",
+                profile: "assets/p24.jpg",
+                title: "I Built My Dream Keyboard from Absolute Scratch",
+                channel: "Christian Selig",
+                views: "1.8M views • 11 months ago"
+            },
+            {
+                thumbnail: "assets/t25.jpg",
+                duration: "28:03",
+                profile: "assets/p25.jpg",
+                title: "FOSS APPS I LOVE ON LINUX!",
+                channel: "LinuxNext",
+                views: "48K views • 7 months ago"
+            },
+            {
+                thumbnail: "assets/t26.jpg",
+                duration: "11:25",
+                profile: "assets/p26.jpg",
+                title: "SQLite Is ULTIMATE Choice For 99% of Projects",
+                channel: "DevOps Toolbox",
+                views: "4.1K views • 5 hours ago"
+            },
+            {
+                thumbnail: "assets/t27.jpg",
+                duration: "38:35",
+                profile: "assets/p27.jpg",
+                title: "I made an operating system from scratch - OS Dev from scratch Part 1 - Setup",
+                channel: "Developed From Scratch",
+                views: "95K views • 1 month ago"
+            },
+        ];
+        function showRandomVideo(element) {
+            // Get random index
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            const video = videos[randomIndex];
+
+            // Generate HTML block
+            const html = `
+                <div class="w-[240px] h-[245px] bg-white mx-auto hover:cursor-pointer" onclick="showRandomVideo(this)">
+                    <div class="relative">
+                        <img src="${video.thumbnail}" alt="Thumbnail" class="w-full rounded-lg hover:rounded-none aspect-video object-cover">
+                        <span class="absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">${video.duration}</span>
+                    </div>
+                    <div class="flex py-3">
+                        <img src="${video.profile}" alt="Profile" class="w-10 h-10 rounded-full mr-3">
+                        <div class="w-full">
+                            <h2 class="text-sm font-semibold leading-snug overflow-hidden"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                ${video.title}
+                            </h2>
+                            <p class="text-xs text-gray-600 truncate">${video.channel}</p>
+                            <p class="text-xs text-gray-500">${video.views}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            element.outerHTML = html; // Replace the clicked element
+        }
+        function showRandomVideoDark(element) {
+            // Get random index
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            const video = videos[randomIndex];
+
+            // Generate HTML block
+            const html = `
+                <div class="w-[240px] h-[245px] bg-[#0F0F0F] mx-auto hover:cursor-pointer" onclick="showRandomVideoDark(this)">
+                    <div class="relative">
+                        <img src="${video.thumbnail}" alt="Thumbnail" class="w-full rounded-lg hover:rounded-none aspect-video object-cover">
+                        <span class="absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">${video.duration}</span>
+                    </div>
+                    <div class="flex py-3">
+                        <img src="${video.profile}" alt="Profile" class="w-10 h-10 rounded-full mr-3">
+                        <div class="w-full">
+                            <h2 class="text-sm text-[#f1f1f1] font-semibold leading-snug overflow-hidden"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                ${video.title}
+                            </h2>
+                            <p class="text-xs text-[#AAAAAA] truncate">${video.channel}</p>
+                            <p class="text-xs text-[#AAAAAA]">${video.views}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            element.outerHTML = html; // Replace the clicked element
+        }
+
+        // Auto-populate all divs on page load
+        window.addEventListener('DOMContentLoaded', function () {
+            const divs = document.querySelectorAll('div[onclick="showRandomVideo(this)"]');
+            divs.forEach(div => {
+                showRandomVideo(div);
+            });
+        });
+        window.addEventListener('DOMContentLoaded', function () {
+            const divs = document.querySelectorAll('div[onclick="showRandomVideoDark(this)"]');
+            divs.forEach(div => {
+                showRandomVideoDark(div);
+            });
+        });
+
+    </script>
+
+    <!-- testing start -->
+    <div class="w-[500px] bg-[#fafafa] mx-auto mb-[20px] pt-[10px] rounded-2xl">
+        <form id="form">
+            <input type="text" id="newVideoTitle" value="a playlist for when you're whispering treason into the ears of angels"
+                class="block w-[80%] mx-auto mt-[28px] mb-[14px] border p-[5px] rounded">
+            <input type="text" id="newChannelName" value="Villain's Playlist"
+                class="block w-[80%] mx-auto mt-[14px] mb-[14px] border p-[5px] rounded">
+            <input type="text" id="newVideoTime" value="3:32:07"
+                class="block w-[80%] mx-auto mt-[14px] mb-[14px] border p-[5px] rounded">
+
+            <div class="block w-[80%] mx-auto mt-[14px] mb-[14px] border rounded overflow-hidden">
+                <label for="newThumbnail" class="block w-full font-bold hover:cursor-pointer">Upload Thumbnail
+                </label>
+                <input type="file" id="newThumbnail" accept="image/*" class="block w-full hover:cursor-pointer">
+            </div>
+            <div class="block w-[80%] mx-auto mt-[14px] mb-[14px] border rounded overflow-hidden">
+                <label for="newChannelLogo" class="block w-full font-bold hover:cursor-pointer">Upload Channel Logo
+                </label>
+                <input type="file" id="newChannelLogo" accept="image/*" class="block w-full hover:cursor-pointer">
+            </div>
+
+            <button type="submit"
+                class="block w-[60%] mx-auto mt-[28px] mb-[38px] border p-[5px] rounded hover:cursor-pointer bg-gray-100 hover:bg-gray-200">
+                Change Above Values and click here</button>
+        </form>
+        <!-- Text to Change -->
+    </div>
+
+    <div class="w-[540px] mx-auto mb-[20px] bg-[#fafafa] grid grid-cols-2 rounded-2xl border-[5px] border-[#fafafa]">
+
+        <div class="w-[240px] h-[245px] bg-white mx-auto hover:cursor-not-allowed shadow-2xl shadow-black/20">
+            <div class="relative">
+                <img src="t1.jpg" alt="Thumbnail" class="oldThumbnail w-full aspect-video object-cover">
+                <span
+                    class="oldVideoTime absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">3:32:07</span>
+            </div>
+            <div class="flex py-3">
+                <img class="oldChannelLogo w-10 h-10 rounded-full mr-3" src="p1.jpg" alt="Profile">
+                <div class="w-full">
+                    <h2 class="oldVideoTitle text-sm font-semibold leading-snug overflow-hidden"
+                        style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                        a playlist for when you're whispering treason into the ears of angels
+                    </h2>
+                    <p class="oldChannelName text-xs text-gray-600 truncate">Villain's Playlist</p>
+                    <p class="text-xs text-gray-500">3.7K views • 3 weeks ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-[240px] h-[245px] bg-[#0F0F0F] mx-auto hover:cursor-not-allowed shadow-2xl shadow-black/20">
+            <div class="relative">
+                <img src="t1.jpg" alt="Thumbnail" class="oldThumbnail w-full aspect-video object-cover">
+                <span
+                    class="oldVideoTime absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">3:32:07</span>
+            </div>
+            <div class="flex py-3">
+                <img src="p1.jpg" alt="Profile" class="oldChannelLogo w-10 h-10 rounded-full mr-3">
+                <div class="w-full">
+                    <h2 class="oldVideoTitle text-sm text-[#f1f1f1] font-semibold leading-snug overflow-hidden"
+                        style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                        a playlist for when you're whispering treason into the ears of angels
+                    </h2>
+                    <p class="oldChannelName text-xs text-[#AAAAAA] truncate">Villain's Playlist</p>
+                    <p class="text-xs text-[#AAAAAA]">3.7K views • 3 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full bg-[#ffffff]">
+        <h1 class="text-[70px] text-center font-black text-gray-300 text-shadow-md">LIGHT MODE PREVIEW</h1>
+        <div
+            class="w-[800px] mx-auto py-[10px] bg-[#ffffff] grid grid-cols-3 rounded-2xl border-[5px] border-[#ffffff]">
+
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <!-- Testing Block Start -->
+            <div class="w-[240px] h-[245px] bg-white mx-auto hover:cursor-not-allowed">
+                <div class="relative">
+                    <img src="t1.jpg" alt="Thumbnail"
+                        class="oldThumbnail w-full rounded-lg hover:rounded-none aspect-video object-cover">
+                    <span
+                        class="oldVideoTime absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">3:32:07</span>
+                </div>
+                <div class="flex py-3">
+                    <img src="p1.jpg" alt="Profile" class="oldChannelLogo w-10 h-10 rounded-full mr-3">
+                    <div class="w-full">
+                        <h2 class="oldVideoTitle text-sm font-semibold leading-snug overflow-hidden"
+                            style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                            a playlist for when you're whispering treason into the ears of angels
+                        </h2>
+                        <p class="oldChannelName text-xs text-gray-600 truncate">Villain's Playlist</p>
+                        <p class="text-xs text-gray-500">3.7K views • 3 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testing block End -->
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideo(this)">
+                <!-- your video block content -->
+            </div>
+            <!-- testing end -->
+        </div>
+    </div>
+
+
+    <div class="w-full bg-[#0F0F0F]">
+        <h1 class="text-[70px] text-center font-black text-zinc-400 text-shadow-md text-shadow-zinc-300">DARK MODE
+            PREVIEW</h1>
+
+        <div
+            class="w-[800px] mx-auto py-[10px] bg-[#0F0F0F] grid grid-cols-3 rounded-2xl border-[5px] border-[#0F0F0F]">
+            <!-- testing start 2 -->
+
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-[#0F0F0F] mx-auto hover:cursor-not-allowed">
+                <div class="relative">
+                    <img src="t1.jpg" alt="Thumbnail"
+                        class="oldThumbnail w-full rounded-lg hover:rounded-none aspect-video object-cover">
+                    <span
+                        class="oldVideoTime absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">3:32:07</span>
+                </div>
+                <div class="flex py-3">
+                    <img src="p1.jpg" alt="Profile" class="oldChannelLogo w-10 h-10 rounded-full mr-3">
+                    <div class="w-full">
+                        <h2 class="oldVideoTitle text-sm text-[#f1f1f1] font-semibold leading-snug overflow-hidden"
+                            style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                            a playlist for when you're whispering treason into the ears of angels
+                        </h2>
+                        <p class="oldChannelName text-xs text-[#AAAAAA] truncate">Villain's Playlist</p>
+                        <p class="text-xs text-[#AAAAAA]">3.7K views • 3 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <div class="w-[240px] h-[245px] bg-white mx-auto" onclick="showRandomVideoDark(this)">
+                <!-- your video block content -->
+            </div>
+            <!-- testing end 2 -->
+        </div>
+    </div>
+    <script>
+        // Get form and elements
+        const input = document.getElementById('userInput');
+        const videoTitle = document.getElementById('videoTitle');
+
+        // When form is submitted
+        document.getElementById('form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Don't reload page
+
+            const newThumbnail = document.getElementById('newThumbnail').files[0];
+            const newChannelLogo = document.getElementById('newChannelLogo').files[0];
+
+            if (newThumbnail) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementsByClassName('oldThumbnail')[0].src = e.target.result;
+                    document.getElementsByClassName('oldThumbnail')[1].src = e.target.result;
+                    document.getElementsByClassName('oldThumbnail')[2].src = e.target.result;
+                    document.getElementsByClassName('oldThumbnail')[3].src = e.target.result;
+                };
+                reader.readAsDataURL(newThumbnail);
+            }
+            if (newChannelLogo) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementsByClassName('oldChannelLogo')[0].src = e.target.result;
+                    document.getElementsByClassName('oldChannelLogo')[1].src = e.target.result;
+                    document.getElementsByClassName('oldChannelLogo')[2].src = e.target.result;
+                    document.getElementsByClassName('oldChannelLogo')[3].src = e.target.result;
+                };
+                reader.readAsDataURL(newChannelLogo);
+            }
+            document.getElementsByClassName('oldVideoTitle')[0].textContent = newVideoTitle.value;
+            document.getElementsByClassName('oldVideoTitle')[1].textContent = newVideoTitle.value;
+            document.getElementsByClassName('oldVideoTitle')[2].textContent = newVideoTitle.value;
+            document.getElementsByClassName('oldVideoTitle')[3].textContent = newVideoTitle.value;
+            document.getElementsByClassName('oldChannelName')[0].textContent = newChannelName.value;
+            document.getElementsByClassName('oldChannelName')[1].textContent = newChannelName.value;
+            document.getElementsByClassName('oldChannelName')[2].textContent = newChannelName.value;
+            document.getElementsByClassName('oldChannelName')[3].textContent = newChannelName.value;
+            document.getElementsByClassName('oldVideoTime')[0].textContent = newVideoTime.value;
+            document.getElementsByClassName('oldVideoTime')[1].textContent = newVideoTime.value;
+            document.getElementsByClassName('oldVideoTime')[2].textContent = newVideoTime.value;
+            document.getElementsByClassName('oldVideoTime')[3].textContent = newVideoTime.value;
+        });
+    </script>
+</body>
+
+</html>
